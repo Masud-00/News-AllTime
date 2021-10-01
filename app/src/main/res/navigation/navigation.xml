@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/generalFragment">
+
+    <fragment
+        android:id="@+id/generalFragment"
+        android:name="com.example.newsalltime.fragment.GeneralFragment"
+        android:label="fragment_general"
+        tools:layout="@layout/fragment_general" >
+        <action
+            android:id="@+id/action_generalFragment_to_technologyFragment"
+            app:destination="@id/technologyFragment" />
+        <action
+            android:id="@+id/action_generalFragment_to_entertainmentFragment"
+            app:destination="@id/entertainmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/technologyFragment"
+        android:name="com.example.newsalltime.fragment.TechnologyFragment"
+        android:label="TechnologyFragment" >
+        <action
+            android:id="@+id/action_technologyFragment_to_generalFragment"
+            app:destination="@id/generalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/entertainmentFragment"
+        android:name="com.example.newsalltime.fragment.EntertainmentFragment"
+        android:label="EntertainmentFragment" >
+        <action
+            android:id="@+id/action_entertainmentFragment_to_generalFragment"
+            app:destination="@id/generalFragment" />
+    </fragment>
+</navigation>
